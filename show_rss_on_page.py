@@ -1,9 +1,11 @@
 # This script displays RSS feeds in a new html page.
 # Put RSS urls in rss_urls.txt
+# There is separate entry for COVID rss feed at the end. Remove it if you don't want it. This is separate to the above named text file.
 
 
 import feedparser
 import webbrowser
+import time
 
 
 def show_feed(feedurl, article_count):
@@ -33,7 +35,8 @@ def show_feed(feedurl, article_count):
     print("<p>~ ~ ~ ~</p>", file=f)
         
 
-filename = "index.htm"
+# filename = "index.htm"
+filename  = "index-" + time.strftime("%Y%m%d-%H%M%S") + ".htm"
 f = open(filename, "w")
     
 print("<html><head></head><html>", file=f)
@@ -58,10 +61,12 @@ for line in g.readlines():
     
 
 for each_url in lines:
-    show_feed(each_url, 5)
+    show_feed(each_url, 7)
 
 g.close()
 ###### END RSS FEEDS ######
+
+show_feed('https://reddit.com/user/roughtourist/m/covid.rss', 20)
 
     
 print("</body></html>", file=f)
