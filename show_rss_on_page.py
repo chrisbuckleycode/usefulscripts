@@ -1,5 +1,6 @@
 # This script displays RSS feeds in a new html page.
-# Parameters are RSS feed url and no. of articles to display.
+# Put RSS urls in rss_urls.txt
+
 
 import feedparser
 import webbrowser
@@ -41,9 +42,25 @@ print("<p><h1>RSS Feeds</h1></p>", file=f)
 
 ###### BEGIN RSS FEEDS ######
 
-show_feed('https://www.reddit.com/r/Coronavirus.rss', 5)
-show_feed('https://www.reddit.com/r/Coronavirus/rising.rss', 5)
+# show_feed('https://www.reddit.com/r/Coronavirus.rss', 5)
+# show_feed('https://www.reddit.com/r/Coronavirus/rising.rss', 5)
 
+g = open(r"rss_urls.txt", "r")
+
+# Initialize list.
+lines = []
+
+# Convert into strings
+for line in g.readlines():
+    li = line.rstrip()
+    if not li.startswith("#"):
+        lines.append(li)
+    
+
+for each_url in lines:
+    show_feed(each_url, 5)
+
+g.close()
 ###### END RSS FEEDS ######
 
     
