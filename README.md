@@ -32,6 +32,9 @@ Extract foreign language sentence pairs from a specific pdf.
 # randompic.py
 Take a random image from a directory and display it on a web page.
 
+# show_rss_on_page.py
+Show your favorite rss feeds on a single page.
+
 # sysreport.sh
 Full system report displayed in the Terminal and saved to a text file.
 
