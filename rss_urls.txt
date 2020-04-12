@@ -1,2 +1,26 @@
-# https://www.reddit.com/r/Coronavirus.rss
-https://www.reddit.com/r/Coronavirus/rising.rss
+[Reddit]
+
+#-https://reddit.com/r/devops.rss?limit=10
+#-https://reddit.com/r/formula1.rss?limit=10
+#-https://reddit.com/r/geopolitics.rss?limit=10
+#-https://reddit.com/r/learnpython.rss?limit=10
+#-https://reddit.com/r/linuxadmin.rss?limit=10
+#-https://reddit.com/r/sysadmin.rss?limit=10
+
+
+[Youtube]
+
+#-https://www.youtube.com/feeds/videos.xml?channel_id=UCy1F61QvUUQXAXi2Voa_fUw
+# indycar
+
+
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+# https://reddit.com/r/.rss?limit=10
+
