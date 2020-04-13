@@ -13,12 +13,12 @@ def show_feed(feedurl, article_count):
     d = feedparser.parse(feedurl)
 
     feed_title = d.feed.title
-    feed_url = d.feed.title_detail.base
+    # feed_url = d.feed.title_detail.base
 
     print("<p><h3>" + feed_title + "</h3></p>", file=f)
-    print("<p>" + feed_url + "</p>", file=f)
+    print("<p>" + feedurl + "</p>", file=f)
     # print('RSS Feed Title is: ' + '\n' + feed_title + '\n', file=f)
-    # print('RSS Feed url is: ' + '\n' + feed_url + '\n', file=f)
+    # print('RSS Feed url is: ' + '\n' + feedurl + '\n', file=f)
 
     limit = len(d.entries)
     if article_count > limit:
@@ -63,14 +63,17 @@ for line in g.readlines():
         if line.strip():
             # if it isn't blank then add it:
             lines.append(li)
-            # if it's a category marker then print it
-            if li.startswith("["):
-                print("<p><h2>Category: " + li[1:-1] + "</h2></p>", file=f)
+            
 
 for each_url in lines:
-    # if it's a category marker then ignore it before parsing the feed and printing it to file
+# these lines are urls or category markers
     if not each_url.startswith("["):
         show_feed(each_url, 7)
+    else:
+        print("<p><h2>Category: " + each_url[1:-1] + "</h2></p>", file=f)
+
+
+        
 
 g.close()
 ###### END RSS FEEDS ######
