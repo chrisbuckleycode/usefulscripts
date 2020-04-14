@@ -26,6 +26,9 @@ Download all images from a sub-page of a popular site.
 # download_images_thread_bs.py
 Download all images from a sub-page of a(nother) popular site.
 
+# move_files.sh
+Migrate files from single source to multiple destination directories based on file extension.
+
 # parse_sentences.py
 Extract foreign language sentence pairs from a specific pdf.
 
@@ -38,8 +41,14 @@ Show your favorite rss feeds on a single page.
 # sysreport.sh
 Full system report displayed in the Terminal and saved to a text file.
 
+# system_health.sh
+Basic stats such as uptime, free mem/disk, memory errors, most expensive processes, network connections, virt. memory etc.
+
 # temps.sh
 Record laptop temperatures into a timestamped logfile, ready for import into Excel/LibreOffice Calc for analysis/charting purposes.
 
 # weather.py
 Scrape and display local weather forecast.
+
+# web_page_change_monitor.sh
+Monitors a web page for changes, logs the time of change and notifies via desktop alert.
