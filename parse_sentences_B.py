@@ -1,6 +1,11 @@
 # parse pdf
 # If you have access to a particular language course, this script will parse sentence pairs from pdfs for personal use to aid your learning. Works on a single file. If you want to do a batch, I recommend capturing a bare filename listing and creating a batch list of commands.
 
+# sudo -H pip3 install --upgrade setuptools
+# sudo apt-get install python3-dev
+# sudo apt-get install build-essential libpoppler-cpp-dev pkg-config python-dev
+# sudo -H pip3 install pdftotext
+
 import pdftotext
 import io
 
