@@ -9,7 +9,7 @@ This code is intended first and foremost for my own use, to get 'the job done'. 
 **This is of course not how I code in a production, enterprise-level environment** where I take a much more collaborative approach!
 
 # bigfiles.sh
-Scan home directory and report files in decreasing size order. Good for freeing up disk space.
+Scan home directory (and sub-directories) and report files in decreasing size order. Good for freeing up disk space.
 
 # comic_of_the_day.py
 Scrape and display a daily comic image.
