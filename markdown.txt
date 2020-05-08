@@ -1,0 +1,11 @@
+Title: This is the title
+Author(single_word): CaptainKirk
+Author_url: https://bing.com
+Image_url: https://i.redd.it/1phq9yjz2jx41.jpg
+MAKE SURE TO SEPARATE PARAGRAPHS WITH A BLANK LINE!
+------------------------------------------------
+First line
+
+line 2
+
+line 3
