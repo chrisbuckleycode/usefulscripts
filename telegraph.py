@@ -1,4 +1,4 @@
-# sudo -H pip3 install marko
+# sudo -H pip3 install mistletoe
 
 import webbrowser
 import mistletoe
