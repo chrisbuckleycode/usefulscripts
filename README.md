@@ -6,7 +6,7 @@ The code for these scripts may look unoptimized and messy, insufficient comments
 
 This code is intended first and foremost for my own use, to get 'the job done'. Right now, I prefer to code for as many use cases as possible and leave excess code in there as aide memoires and educational reminders - hopefully one day I will return to optimize, modularize, comment my code. **That is not my priority or goal at this moment**.
 
-**This is of course not how I code in a production, enterprise-level environment** where I take a much more collaborative approach!
+**This is of course not how I code in a production, enterprise-level environment** where I would focus on more readable code, modularized structure and generally take a much more collaborative approach!
 
 # bigfiles.sh
 Scan home directory (and sub-directories) and report files in decreasing size order. Good for freeing up disk space.
