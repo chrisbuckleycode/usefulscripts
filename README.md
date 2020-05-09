@@ -44,6 +44,9 @@ Full system report displayed in the Terminal and saved to a text file.
 # system_health.sh
 Basic stats such as uptime, free mem/disk, memory errors, most expensive processes, network connections, virt. memory etc.
 
+# telegraph.py
+Post with preview via API to telegra.ph - download and edit markdown.txt. Only single (optional) image url and plain text supported for now. Separate each paragraph with a blank line. Create a file called access_token.txt and put your access token in there. You can obtain an access token and read the rest of the API docs here: https://telegra.ph/api#createAccount
+
 # temps.sh
 Record laptop temperatures into a timestamped logfile, ready for import into Excel/LibreOffice Calc for analysis/charting purposes.
 
