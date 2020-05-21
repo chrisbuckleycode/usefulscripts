@@ -26,6 +26,9 @@ Download all images from a sub-page of a popular site.
 # download_images_thread_bs.py
 Download all images from a sub-page of a(nother) popular site.
 
+# grab_webcam.sh
+Download jpg frames of a static webcam feed
+
 # move_files.sh
 Migrate files from single source to multiple destination directories based on file extension.
 
@@ -52,6 +55,14 @@ Record laptop temperatures into a timestamped logfile, ready for import into Exc
 
 # weather.py
 Scrape and display local weather forecast.
+
+# webcam_capture_long.py
+
+Download jpg frames of a dynamic webcam feed (mjpg). For longer, time-lapse, captures.
+
+# webcam_capture_short.py
+
+Download jpg frames of a dynamic webcam feed (mjpg). For shorter, burst, captures.
 
 # web_page_change_monitor.sh
 Monitors a web page for changes, logs the time of change and notifies via desktop alert.
