@@ -17,6 +17,9 @@ Scrape and display a daily comic image.
 # convert_to_csv.py
 Convert a particular file format of sentence pairs (native and target foreign language) into a csv-style format for importation into Excel/LibreOffice Calc.
 
+# crop_image_top.py
+Remove banner or in any other way batch crop a number of images.
+
 # display_bitcoin_price.py
 Scrape and display current bitcoin price.
 
