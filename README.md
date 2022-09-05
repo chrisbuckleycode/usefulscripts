@@ -56,9 +56,6 @@ Post with preview via API to telegra.ph - download and edit markdown.txt. Only s
 # temps.sh
 Record laptop temperatures into a timestamped logfile, ready for import into Excel/LibreOffice Calc for analysis/charting purposes.
 
-# weather.py
-Scrape and display local weather forecast.
-
 # webcam_capture_long.py
 
 Download jpg frames of a dynamic webcam feed (mjpg). For longer, time-lapse, captures.
