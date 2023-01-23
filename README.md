@@ -28,6 +28,9 @@ Download all images from a sub-page of a(nother) popular site.
 # dupe_file_checker.sh
 Scans recursively all files and prints a table of those that are duplicated (md5 checksum).
 
+# function_grepper.py
+Scans recursively all .py files and greps function names.
+
 # grab_webcam.sh
 Download jpg frames of a static webcam feed
 
