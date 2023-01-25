@@ -7,6 +7,12 @@ These scripts are not optimized. They are short and to the point, to get the job
 # bigfiles.sh
 Scan home directory (and sub-directories) and report files in decreasing size order. Good for freeing up disk space.
 
+# bmarks-sort-alpha-title-only.py
+Import bookmarks file, populate dictionary with titles and urls. Sort alphabetically by url. Recreate bookmarks file with hyperlinked title only.
+
+# bmarks-sort-alpha-url-title.py
+Import bookmarks file, populate dictionary with titles and urls. Sort alphabetically by url. Recreate bookmarks file with hyperlinked url and hyperlinked title.
+
 # comic_of_the_day.py
 Scrape and display a daily comic image.
 
