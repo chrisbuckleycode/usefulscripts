@@ -1,6 +1,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#!/bin/bash
+#!/usr/bin/env bash
 
 # web_page_change_monitor.sh
 

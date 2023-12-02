@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://zxq9.com/archives/795
 # this downloads a new image from a web cam every second
 # sudo apt-get install imagemagick

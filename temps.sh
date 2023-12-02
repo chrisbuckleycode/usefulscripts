@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # temps.sh
 # this script will create a timestamped file and record temperature data every second to it.
 # It is easily imported into Excel or LibreOffice Calc to make charts with.
