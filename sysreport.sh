@@ -1,6 +1,6 @@
 System Report
 
-#!/bin/bash
+#!/usr/bin/env bash
 # this script will collect system info and display and save it to a file.
 
 filename="System_Report_$(date +"%FT%H%M%S%z").log"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # this script will scan all files in your home directory (or just the Downloads folder) and then list them in order of descending size using less.
 
 RED='\033[0;31m'

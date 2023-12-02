@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 mv -v {*.mp3,*.ogg,*.wav} ../Music
 mv -v {*.mp4,*.flv,*.mkv,*.srt} ../Videos
