@@ -5,6 +5,7 @@ import datetime
 
 # sudo apt install tesseract-ocr
 # Remember venv FIRST then:
+# python3 -m pip install pytesseract
 # python3 -m pip install --upgrade pip
 # python3 -m pip install --upgrade Pillow
 
