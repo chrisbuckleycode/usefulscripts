@@ -1,4 +1,4 @@
-// Display crypto pair price data, updated every 60 seconds, uses Binance free API
+// Display and log crypto pair price data, updated every 60 seconds, uses Binance free API
 //
 // Instructions:
 // go mod init example.com/ticker
@@ -10,6 +10,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"strconv"
@@ -39,8 +40,20 @@ func fetchTickerData(url string) (TickerResponse, error) {
 }
 
 func printTableHeader() {
-	fmt.Printf("| %-19s | %-10s | %-15s | %-20s |\n", "Timestamp", "Symbol", "USD Price", "24 Hr Price Change %")
+	fmt.Printf("| %-19s | %-10s | %-15s | %-20s |\n", "Timestamp", "Symbol", "Price", "24 Hr Price Change %")
 	fmt.Printf("|---------------------|------------|-----------------|----------------------|\n")
+}
+
+func logToFile(filename, message string) {
+	f, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer f.Close()
+
+	if _, err := f.WriteString(message + "\n"); err != nil {
+		log.Fatal(err)
+	}
 }
 
 func main() {
@@ -50,6 +63,10 @@ func main() {
 	// Define the API URLs
 	priceURL := fmt.Sprintf("https://api.binance.com/api/v3/ticker/price?symbol=%s", symbol)
 	statsURL := fmt.Sprintf("https://api.binance.com/api/v3/ticker/24hr?symbol=%s", symbol)
+
+	// Open or create the log file
+	logFile := "ticker.log"
+	logToFile(logFile, "Timestamp,Symbol,Price,24 Hr Price Change %")
 
 	printTableHeader()
 
@@ -90,6 +107,10 @@ func main() {
 		// Print the current row of data
 		fmt.Printf("| %-19s | %-10s | %-15s | %-20s |\n", currentTime, tickerPrice.Symbol, formattedPrice, formattedPriceChangePct)
 
-		time.Sleep(60 * time.Second) // Wait for 60 seconds before refreshing
+		// Log the data to the file
+		logMessage := fmt.Sprintf("%s,%s,%s,%s", currentTime, tickerPrice.Symbol, formattedPrice, formattedPriceChangePct)
+		logToFile(logFile, logMessage)
+
+		time.Sleep(10 * time.Second) // Wait for 60 seconds before refreshing
 	}
 }
