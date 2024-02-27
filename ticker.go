@@ -111,6 +111,6 @@ func main() {
 		logMessage := fmt.Sprintf("%s,%s,%s,%s", currentTime, tickerPrice.Symbol, formattedPrice, formattedPriceChangePct)
 		logToFile(logFile, logMessage)
 
-		time.Sleep(10 * time.Second) // Wait for 60 seconds before refreshing
+		time.Sleep(60 * time.Second) // Wait for 60 seconds before refreshing
 	}
 }
