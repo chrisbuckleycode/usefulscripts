@@ -1,3 +1,12 @@
+// Conduct an internet connectivity test and display statistics
+// calculated from the samples gathered, specifically speed in kilobytes per second
+// Note: "test" is a reserved goland term in filenames. Hence, in our case we have elected to truncate to "tst"
+//
+// Instructions:
+// go mod init example.com/connectivity-tst
+// go mod tidy
+// go run connectivity_tst.go
+
 package main
 
 import (
