@@ -21,6 +21,7 @@ import (
 var subcommands = map[string]string{
 	"recent": "List files in the current directory (sorted by modification time, most recent last)",
 	"env":    "Display environment variables",
+	"host":   "Display hostname",
 	"help":   "Display this help message",
 }
 
@@ -37,6 +38,8 @@ func main() {
 		executeCommand("ls", "-haltr")
 	case "env":
 		executeCommand("printenv")
+	case "host":
+		fmt.Println("Hostname:", getHostname())
 	case "help":
 		displayHelp()
 	default:
@@ -44,7 +47,7 @@ func main() {
 	}
 }
 
-// executeCommand executes the given command with the provided arguments
+// Executes the given command with the provided arguments
 func executeCommand(command string, args ...string) {
 	cmd := exec.Command(command, args...)
 	cmd.Stdout = os.Stdout
@@ -56,7 +59,13 @@ func executeCommand(command string, args ...string) {
 	}
 }
 
-// displayHelp shows the help message
+// Retrieves the hostname
+func getHostname() string {
+	hostname, _ := os.Hostname()
+	return hostname
+}
+
+// Shows the help message
 func displayHelp() {
 	fmt.Println("Usage: easy <command>")
 	fmt.Println("Available commands:")
