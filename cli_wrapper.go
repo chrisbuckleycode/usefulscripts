@@ -61,7 +61,11 @@ func executeCommand(command string, args ...string) {
 
 // Retrieves the hostname
 func getHostname() string {
-	hostname, _ := os.Hostname()
+	hostname, err := os.Hostname()
+	if err != nil {
+		fmt.Printf("Failed to retrieve hostname:", err)
+		return "" // Return an empty string in case of error
+	}
 	return hostname
 }
 
