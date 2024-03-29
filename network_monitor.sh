@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+# Usage:
+
+# (1) Run script, send to background, do not log stdout
+# nohup ./network_monitor.sh >/dev/null 2>&1 &
+
+# (2) Grep process list, take the earliest PID (row 1) and kill
+# ps aux | grep "bash ./network_monitor.sh" | awk 'NR==1 { print $2 }' | xargs kill -TERM
+
+
 LOG_FILE="./network_monitor.log"
 PING_HOST="8.8.8.8"  # Change this to the IP or hostname you want to ping
 TIMEOUT_SECONDS=1  # Timeout value in seconds, required to kill hanging tracepath
