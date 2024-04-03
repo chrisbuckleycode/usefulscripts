@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graffiti Wall</title>
+</head>
+<body>
+    {% for entry in graffiti.splitlines() %}
+        {% if entry.strip() != '' %}
+            <p>{{ entry.split(' - ')[0] }}</p>
+            {% for line in entry.split(' - ')[1:] %}
+                <p>{{ line }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
