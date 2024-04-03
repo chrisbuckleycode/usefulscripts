@@ -20,8 +20,9 @@ $ rm -rf .env
 # Remarks
 - Flat file "database" is graffiti_wall.txt
 - Tested successfully on pythonanywhere.com hosting
-- Auth user/pass stored in plaintext. You should use environment variables for production
+- Auth user/pass stored in plaintext. You should use environment variables/encryption/hashing for production
 
 # Future Ideas
 - Change messaging order to reverse chronological?
 - Add colors, ANSI art to graffiti wall
+- Improve auth
