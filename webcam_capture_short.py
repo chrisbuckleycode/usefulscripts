@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # sudo -H pip3 install opencv-python
 
 # This script opens a stream and saves frames every 1s, 5s or some other short duration. Use only for short captures of 1 to 2 minutes as overread will occur. See other script for time lapse over longer duration

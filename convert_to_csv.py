@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # convert to csv
 # This is used to convert a file of sentence pairs that alternate in language so they are ampersand separated and easily imported like a csv into Excel or LibreOffice Calc.
 
