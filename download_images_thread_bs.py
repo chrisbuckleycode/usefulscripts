@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # This script will download images from a sub-page of a popular site. As I won't reveal that, this script is for educational value only. You must modify the 'url' and 'user_agent' variables. You can get a random user agent from here: https://user-agents.net/random
 
 from bs4 import BeautifulSoup

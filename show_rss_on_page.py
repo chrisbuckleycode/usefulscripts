@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # This script displays RSS feeds in a new html page.
 # Put RSS urls in rss_urls.txt
 # There is separate entry for COVID rss feed at the end. Remove it if you don't want it. This is separate to the above named text file.

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # display random picture from ./quotes/ directory
 # this script will create and then display and html file composed of a single random image plucked from a sub-directory called "quotes".
 
