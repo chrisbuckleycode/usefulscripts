@@ -5,10 +5,13 @@
 </head>
 <body>
     <form action="/" method="POST">
-        <textarea name="text" rows="5" cols="40"></textarea><br>
+        <textarea name="text" rows="20" cols="200"></textarea><br>
         <input type="submit" value="Submit">
     </form>
     <br />
     <a href="/graffiti_wall">The Wall</a>
+    {% if success_message %}
+        <p><span style="color: rgb(128, 0, 128)">{{ timestamp }}: {{ success_message }}</span></p> <!-- This will be blank on first load due to null values -->
+    {% endif %}
 </body>
 </html>
