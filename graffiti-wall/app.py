@@ -19,6 +19,8 @@ def verify_password(username, password):
 @app.route('/', methods=['GET', 'POST'])
 @auth.login_required
 def index():
+    success_message = None  # Default value for success message i.e. null value, NOT the string "None"!! Required to satisfy template render pre-POST
+    timestamp = None
     if request.method == 'POST':
         text = request.form['text']
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -26,7 +28,8 @@ def index():
         with open('graffiti_wall.txt', 'a') as file:
             file.write(entry + '\n')
             file.write('=' * 40 + '\n')
-    return render_template('index.html')
+        success_message = 'Post successfully submitted!'  # Update success message
+    return render_template('index.html', success_message=success_message, timestamp=timestamp)
 
 @app.route('/graffiti_wall')
 @auth.login_required
