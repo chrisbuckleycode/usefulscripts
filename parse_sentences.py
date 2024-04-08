@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # parse pdf
 # If you have access to a particular language course, this script will parse sentence pairs from pdfs for personal use to aid your learning. Works on a single file. If you want to do a batch, I recommend capturing a bare filename listing and creating a batch list of commands.
 

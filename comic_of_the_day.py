@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # display comic of the day
 # this script takes the comic of the day (an image) from a particular web site, downloads it and creates an HTML page to display it. It uses the first image found of a specified class. User agent should be changed for your own use e.g.use https://user-agents.net/random
 
