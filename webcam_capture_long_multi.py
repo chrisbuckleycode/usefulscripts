@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # sudo -H pip3 install opencv-python
 # sudo -H pip3 install numpy
 

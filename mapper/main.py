@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from geopy.geocoders import Nominatim
 import webbrowser
 

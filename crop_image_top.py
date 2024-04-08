@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # sudo -H pip3 install Pillow
 # after cropping, convert to animated gif with imagemagick:
 # convert -delay 6 -loop 0 *.jpg animated.gif

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # This script will search the current directory and all sub-directories
 # for .py files, grepping any function declarations
 # and saving to a text file
