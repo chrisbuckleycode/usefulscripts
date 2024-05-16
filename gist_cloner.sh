@@ -28,7 +28,7 @@ timestamp_dir="$backup_parent_dir/$timestamp"
 mkdir "$timestamp_dir"
 
 # Get list of gist IDs
-gist_list=$(gh gist list -L 999 | awk 'NR>1 {print $1}')
+gist_list=$(gh gist list -L 999 | awk '{print $1}')
 
 # Clone gists and store file paths in an array
 cloned_files=()
