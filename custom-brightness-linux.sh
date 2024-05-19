@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
+# Script to allow command-line brightness control for Intel graphics display on Linux
+# This permits setting backlight as low as 1 and incrementing/decrementing in single digit steps
+# (ordinarily only steps of 10 are available via button press and minimum value of 10)
+
+
 # Prompt user to run the script as sudo
 echo "This script must be run as sudo."
-echo "This script assumes you have no existing file: /etc/X11/xorg.conf."
 echo "---"
 echo "Press any key to continue or Ctrl-C to quit."
 read -n 1 -s
@@ -10,6 +14,7 @@ read -n 1 -s
 # Check if the prerequisite symbolic link /sys/class/backlight/intel_backlight exists
 if [ ! -L "/sys/class/backlight/intel_backlight" ]; then
   echo "Error: /sys/class/backlight/intel_backlight does not exist."
+  echo "Exiting..."
   exit 1
 fi
 
@@ -23,11 +28,21 @@ file_contents='Section "Device"
     Option      "Backlight"  "intel_backlight"
 EndSection'
 
-# Create the file with the defined contents
-echo "$file_contents" > "$filename"
-
-# Display a success message
-echo "File created: $filename"
+# Check if the file already exists
+if [ -f "$filename" ]; then
+  # Check if the string "intel_backlight" exists in the file
+  if grep -q "intel_backlight" "$filename"; then
+    echo "Check config: An entry for intel_backlight already exists and will be presumed in working order."
+  else
+    # Add file_contents to the file
+    echo "$file_contents" >> "$filename"
+    echo "File updated: $filename"
+  fi
+else
+  # Create the file with the defined contents
+  echo "$file_contents" > "$filename"
+  echo "File created: $filename"
+fi
 
 # Check if xbacklight is installed
 if ! command -v xbacklight &> /dev/null; then
