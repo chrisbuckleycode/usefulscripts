@@ -1,0 +1,18 @@
+*DIV*
+r/announcements: Announcements
+Official announcements from Reddit, Inc.
+308067556
+*DIV*
+r/gaming: r/gaming
+The Number One Gaming forum on the Internet.
+41133040
+*DIV*
+r/worldnews: World News
+A place for major news from around the world, excluding US-internal news.
+36845916
+*DIV*
+r/pics: Reddit Pics
+A place for photographs, pictures, and other images.
+30813973
+*DIV*
+
