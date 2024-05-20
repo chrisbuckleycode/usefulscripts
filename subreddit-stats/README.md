@@ -23,6 +23,7 @@ sqlite> .exit
 ```
 
 # Remarks
+- Python script uses only internal libraries - no virtual environment required
 - Sample input.txt provided
 
 # Future Ideas
