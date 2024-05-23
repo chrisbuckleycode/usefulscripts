@@ -22,11 +22,14 @@ fi
 filename="/etc/X11/xorg.conf"
 
 # Define the file contents
-file_contents='Section "Device"
+file_contents=$(cat <<EOF
+Section "Device"
     Identifier  "Intel Graphics"
     Driver      "intel"
     Option      "Backlight"  "intel_backlight"
-EndSection'
+EndSection
+EOF
+)
 
 # Check if the file already exists
 if [ -f "$filename" ]; then
