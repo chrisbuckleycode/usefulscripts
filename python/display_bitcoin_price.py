@@ -1,4 +1,13 @@
-# display bitcoin price
+## FILE: display_bitcoin_price.py
+##
+## DESCRIPTION: Scrapes and displays Bitcoin price.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 display_bitcoin_price.py
+##
+
+# TODO(chrisbuckleycode): Reword/refactor below comment
 # this script will scrape a particular site for bitcoin price value then save it in an html page and display it. As I won't reveal that site, this script is for educational value only. You must modify the 'url' and 'user_agent' variables. You can get a random user agent from here: https://user-agents.net/random
 
 from datetime import datetime

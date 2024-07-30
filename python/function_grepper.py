@@ -1,3 +1,12 @@
+## FILE: function_grepper.py
+##
+## DESCRIPTION: Extracts (greps) function names from a code base.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 function_grepper.py
+##
+
 # This script will search the current directory and all sub-directories
 # for .py files, grepping any function declarations
 # and saving to a text file

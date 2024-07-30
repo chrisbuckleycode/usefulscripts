@@ -1,9 +1,13 @@
-#!/usr/bin/env bash
-
-# Parses netstat output to give
-# a table of Local Port; PID/Program name
-# (sorted by port)
-# Run script with sudo
+#!/bin/bash
+##
+## FILE: local-port-pid.sh
+##
+## DESCRIPTION: Displays Local Port; PID/Program name (via netstat).
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: local-port-pid.sh
+##
 
 # Check if running with sudo
 if [ "$(id -u)" != "0" ]; then

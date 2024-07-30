@@ -1,12 +1,19 @@
+## FILE: show_rss_on_page.py
+##
+## DESCRIPTION: Displays RSS feeds in a browser from urls in a source file.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 show_rss_on_page.py
+##
+
 # This script displays RSS feeds in a new html page.
 # Put RSS urls in rss_urls.txt
 # There is separate entry for COVID rss feed at the end. Remove it if you don't want it. This is separate to the above named text file.
 
-
 import feedparser
 import webbrowser
 import time
-
 
 def show_feed(feedurl, article_count):
 
@@ -36,7 +43,6 @@ def show_feed(feedurl, article_count):
         print("<p>" + str(i + 1) + ") <a target='_blank' href='" + item_link + "'>" + item_name + "</a></p>", file=f)
     print("<p>~ ~ ~ ~</p>", file=f)
         
-
 # filename = "index.htm"
 filename  = "index-" + time.strftime("%Y%m%d-%H%M%S") + ".htm"
 f = open(filename, "w")
@@ -71,9 +77,6 @@ for each_url in lines:
         show_feed(each_url, 7)
     else:
         print("<p><h2>Category: " + each_url[1:-1] + "</h2></p>", file=f)
-
-
-        
 
 g.close()
 ###### END RSS FEEDS ######

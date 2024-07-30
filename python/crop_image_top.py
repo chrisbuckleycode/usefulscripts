@@ -1,3 +1,14 @@
+## FILE: crop_image_top.py
+##
+## DESCRIPTION: Crops image using Pillow for custom use case.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 crop_image_top.py
+##
+
+# TODO(chrisbuckleycode): Clean up comment block below from this very old script!
+
 # sudo -H pip3 install Pillow
 # after cropping, convert to animated gif with imagemagick:
 # convert -delay 6 -loop 0 *.jpg animated.gif
@@ -21,4 +32,3 @@ for infile in listing:
 #    cropped = cropped.rotate(2.9)     # optional rotate and re-crop
 #    cropped = cropped.crop((9, 18, 791, 410)) # left, upper, right, lower; image size is 800 x 450 px
     cropped.save(path + "cropped_" + file_root + file_ext, "JPEG")
-

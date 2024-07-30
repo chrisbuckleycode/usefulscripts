@@ -1,8 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: gist_cloner.sh
+##
+## DESCRIPTION: Clones all gists in a Github account without using API tokens (requires gh cli).
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: gist_cloner.sh
+##
 
-# Clone all gists WITHOUT using API tokens
-# Requires gh cli (authenticated)
-
+# Requires gh cli already authenticated
 
 # Check if 'gh' command exists
 if ! command -v gh &> /dev/null; then

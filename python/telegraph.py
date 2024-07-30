@@ -1,3 +1,12 @@
+## FILE: telegraph.py
+##
+## DESCRIPTION: Creates a telegra.ph page by sourcing a text file and performing a rudimentary (and non-advisable) API request.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 telegraph.py
+##
+
 # sudo -H pip3 install mistletoe
 
 import webbrowser

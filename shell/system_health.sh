@@ -1,4 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: system_health.sh
+##
+## DESCRIPTION: Displays system info using common Linux commands.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: system_health.sh
+##
+
+# TODO(chrisbuckleycode): Consider rewriting this very old script!
+
 date
 echo "uptime:"
 uptime

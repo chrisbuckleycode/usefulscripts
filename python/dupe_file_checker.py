@@ -1,3 +1,12 @@
+## FILE: duplicate_file_checker.py
+##
+## DESCRIPTION: Identifies duplicate files (by MD5 checksum).
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 duplicate_file_checker.py
+##
+
 import os
 import hashlib
 from collections import Counter

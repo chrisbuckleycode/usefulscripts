@@ -1,3 +1,12 @@
+## FILE: bmarks-sort-alpha-url-title.py
+##
+## DESCRIPTION: Sorts bookmarks alphabetically. Displays Url and Title.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 bmarks-sort-alpha-url-title.py
+##
+
 from bs4 import BeautifulSoup
 import os
 

@@ -1,4 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: password_generator.sh
+##
+## DESCRIPTION: Generates random passphrases using EFF word lists.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: password_generator.sh
+##
 
 url="https://www.eff.org/files/2016/09/08/eff_short_wordlist_1.txt"
 # Wordlist explanation: https://www.eff.org/dice

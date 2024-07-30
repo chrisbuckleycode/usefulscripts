@@ -1,4 +1,14 @@
-from bs4 import BeautifulSoup
+## FILE: weather-forecast-daily-translated.py
+##
+## DESCRIPTION: Scrapes a desired section of text from a web site.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 weather-forecast-daily-translated.py
+##
+# TODO(chrisbuckleycode): Add translation function.
+
+# from bs4 import BeautifulSoup
 import urllib.request
 import re
 

@@ -1,4 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: repo_size_files.sh
+##
+## DESCRIPTION: Lists a repo's files sorted by size descending.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: repo_size_files.sh <clone_url>
+##
 
 # Error handling
 if [ -z "$1" ]

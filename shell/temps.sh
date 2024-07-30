@@ -1,7 +1,13 @@
-#!/usr/bin/env bash
-# temps.sh
-# this script will create a timestamped file and record temperature data every second to it.
-# It is easily imported into Excel or LibreOffice Calc to make charts with.
+#!/bin/bash
+##
+## FILE: temps.sh
+##
+## DESCRIPTION: Records sensor temperature to a file for direct import into spreadsheet software.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: temps.sh
+##
 
 filename=~/sensor_log_$(date +"%FT%H%M%z").txt
 # filename=test.txt

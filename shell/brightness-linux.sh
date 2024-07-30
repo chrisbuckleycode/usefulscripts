@@ -1,6 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: brightness-linux.sh
+##
+## DESCRIPTION: Enables command-line brightness control for Intel graphics display on Linux.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: brightness-linux.sh
+##
 
-# Script to allow command-line brightness control for Intel graphics display on Linux
 # This permits setting backlight as low as 1 and incrementing/decrementing in single digit steps
 # (ordinarily only steps of 10 are available via button press and minimum value of 10)
 

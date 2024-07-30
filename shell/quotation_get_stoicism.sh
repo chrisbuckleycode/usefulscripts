@@ -1,4 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: quotation_get_stoicism.sh
+##
+## DESCRIPTION: Generates random stoicism quotation response from a free API.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: quotation_get_stoicism.sh
+##
+
+# TODO(chrisbuckleycode): Add check for jq
 
 # Define API endpoint
 API_ENDPOINT="https://api.themotivate365.com/stoic-quote"

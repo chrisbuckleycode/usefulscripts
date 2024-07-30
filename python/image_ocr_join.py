@@ -1,3 +1,12 @@
+## FILE: image_ocr_join.py
+##
+## DESCRIPTION: Extracts text from image files in a directory.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 image_ocr_join.py
+##
+
 import pytesseract
 from PIL import Image
 import glob

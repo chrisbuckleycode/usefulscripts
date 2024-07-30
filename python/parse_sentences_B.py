@@ -1,4 +1,14 @@
-# parse pdf
+## FILE: parse_sentences_B.py
+##
+## DESCRIPTION: Parses a PDF and converts sentence pairs to csv format (n.b. very bad early-days code!).
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 parse_sentences_B.py
+##
+
+# TODO(chrisbuckleycode): Refactor this script from my early days!
+
 # If you have access to a particular language course, this script will parse sentence pairs from pdfs for personal use to aid your learning. Works on a single file. If you want to do a batch, I recommend capturing a bare filename listing and creating a batch list of commands.
 
 # sudo -H pip3 install --upgrade setuptools
