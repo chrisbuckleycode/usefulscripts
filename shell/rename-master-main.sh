@@ -1,7 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: rename-master-main.sh
+##
+## DESCRIPTION: Converts repo's mainline branch from "master" to "main".
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: rename-master-main.sh
+##
 
-# This script will convert a repo's mainline branch
-# from "master" to "main"
 # n.b. depending on your scm tool there may be
 # alternative methods to achieve the same result.
 

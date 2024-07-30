@@ -1,8 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: git_cloner.sh
+##
+## DESCRIPTION: Clones all git repos in a Github account without using API tokens (requires gh cli).
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: git_cloner.sh
+##
 
-# Clone all gits WITHOUT using API tokens
-# Requires gh cli (authenticated)
-
+# Requires gh cli already authenticated
 
 # Check if 'gh' command exists
 if ! command -v gh &> /dev/null; then

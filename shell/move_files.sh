@@ -1,4 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: move_files.sh
+##
+## DESCRIPTION: Organizes local files: moves by extension.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: move_files.sh
+##
+
+# TODO(chrisbuckleycode): Add checks for pre-existing target directories
 
 mv -v {*.mp3,*.ogg,*.wav} ../Music
 mv -v {*.mp4,*.flv,*.mkv,*.srt} ../Videos

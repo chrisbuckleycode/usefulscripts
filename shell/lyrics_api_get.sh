@@ -1,4 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: lyrics_api_get.sh
+##
+## DESCRIPTION: Displays random lyric from API request.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: lyrics_api_get.sh
+##
+
+# TODO(chrisbuckleycode): Add checks for external programs
 
 # fetches a random lyric by The Killers (or a band of your choice)
 # also can use this one-liner copy and paste terminal command:

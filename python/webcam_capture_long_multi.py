@@ -1,3 +1,12 @@
+## FILE: webcam_capture_long_multi.py
+##
+## DESCRIPTION: Captures images periodically from multiple simultaneous LONG mjpg streams.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 webcam_capture_long_multi.py
+##
+
 # sudo -H pip3 install opencv-python
 # sudo -H pip3 install numpy
 

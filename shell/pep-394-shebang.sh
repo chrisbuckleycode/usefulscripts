@@ -1,6 +1,13 @@
-#!/usr/bin/env bash
-
-# Script checks all .py files for the PEP-394 compliant shebang line #!/usr/bin/env python
+#!/bin/bash
+##
+## FILE: pep-394-shebang.sh
+##
+## DESCRIPTION: Updates Python scripts with PEP-394 comcompliant shebang line.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: pep-394-shebang.sh
+##
 
 # Function to update the shebang line in a Python file
 update_shebang() {

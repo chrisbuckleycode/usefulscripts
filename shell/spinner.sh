@@ -1,6 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: spinner.sh
+##
+## DESCRIPTION: Spinner animation functions and code.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: spinner.sh
+##
 
-# Sample functions and code for a spinner animation.
 # Useful when a process takes several seconds and shows no obvious progress to end user.
 # Copy and paste functions to your script or place in a separate file and link
 # e.g. "source lib.sh"

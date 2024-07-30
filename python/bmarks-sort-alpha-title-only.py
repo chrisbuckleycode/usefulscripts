@@ -1,3 +1,12 @@
+## FILE: bmarks-sort-alpha-title-only.py
+##
+## DESCRIPTION: Sorts bookmarks alphabetically. Displays Title only.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 bmarks-sort-alpha-title-only.py
+##
+
 from bs4 import BeautifulSoup
 import os
 

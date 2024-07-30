@@ -1,4 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: namegen.sh
+##
+## DESCRIPTION: Generates random permutations of adjective-noun names.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: namegen.sh
+##
 
 # Generate 20 random permutations of adjective-noun names e.g. "Cool Luke"
 # Requires your own source files: adjectives.txt, nouns.txt

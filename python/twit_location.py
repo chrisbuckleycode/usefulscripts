@@ -1,3 +1,13 @@
+## FILE: twit_location.py
+##
+## DESCRIPTION: Constructs a Twitter/X location search url for a city name argument.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 twit_location.py
+##
+
+
 import requests
 import json
 

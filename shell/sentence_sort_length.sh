@@ -1,4 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: sentence_sort_length.sh
+##
+## DESCRIPTION: Sorts sentences by decreasing length (useful for social media).
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: sentence_sort_length.sh <input_file.txt>
+##
 
 # Provide input file of sentences as argument, it will be sorted by sentence length and saved as a new file
 # It basically creates and index, sorts by it, then removes it prior to saving

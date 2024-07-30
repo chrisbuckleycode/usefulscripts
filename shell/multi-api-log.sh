@@ -1,4 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: multi-api-log.sh
+##
+## DESCRIPTION: Requests from a randomly chosen API and writes response to log file.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: multi-api-log.sh
+##
 
 # Randomly curl an api and write the response to a log file
 # Start the script in the background using: sudo ./multi-api-log.sh &

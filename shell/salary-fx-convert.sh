@@ -1,4 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: salary-fx-convert.sh
+##
+## DESCRIPTION: Displays table of salary currency conversions.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: salary-fx-convert.sh
+##
 
 # This script produces a table of static local currency monthly salary vs equivalent home currency annual salary.
 # Currencies and base values are configurable as variables.

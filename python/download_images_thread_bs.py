@@ -1,3 +1,13 @@
+## FILE: download_images_thread_bs.py
+##
+## DESCRIPTION: Downloads images from sub-page of a popular site.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 download_images_thread_bs.py
+##
+
+# TODO(chrisbuckleycode): Reword/refactor below comment
 # This script will download images from a sub-page of a popular site. As I won't reveal that, this script is for educational value only. You must modify the 'url' and 'user_agent' variables. You can get a random user agent from here: https://user-agents.net/random
 
 from bs4 import BeautifulSoup

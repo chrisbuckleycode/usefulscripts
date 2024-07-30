@@ -1,4 +1,12 @@
-# display comic of the day
+## FILE: comic_of_the_day.py
+##
+## DESCRIPTION: Displays comic of the day.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: python3 comic_of_the_day.py
+##
+
 # this script takes the comic of the day (an image) from a particular web site, downloads it and creates an HTML page to display it. It uses the first image found of a specified class. User agent should be changed for your own use e.g.use https://user-agents.net/random
 
 

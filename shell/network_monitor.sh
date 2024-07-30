@@ -1,4 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: network_monitor.sh
+##
+## DESCRIPTION: Continuously monitors network and writes findings to log file.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: network_monitor.sh
+##
 
 # Usage:
 

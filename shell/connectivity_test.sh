@@ -1,7 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: connectivity_test.sh
+##
+## DESCRIPTION: Tests internet connectivity and displays statistics.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: connectivity_test.sh
+##
 
-# Conduct an internet connectivity test using curl and display statistics
-# calculated from the samples gathered, specifically speed in kilobytes per second
+# Calculated from the samples gathered, specifically speed in kilobytes per second
 
 # Set the number of samples to take
 samples=10

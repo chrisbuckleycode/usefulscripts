@@ -1,7 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
+##
+## FILE: word_count_file.sh
+##
+## DESCRIPTION: Displays word frequency statistics from a text file.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: word_count_file.sh <input_file.txt>
+##
 
-# word count script
-#
 # usage: ./script.sh filetoparse.txt
 # alternative usage: curl -sS <URL> | ./script.sh -
 #

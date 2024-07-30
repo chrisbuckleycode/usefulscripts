@@ -1,5 +1,13 @@
-#!/usr/bin/env bash
-# this script will scan all files in your home directory (or just the Downloads folder) and then list them in order of descending size using less.
+#!/bin/bash
+##
+## FILE: bigfiles.sh
+##
+## DESCRIPTION: Displays  all files in directory, sorted by decreasing size.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: bigfiles.sh
+##
 
 RED='\033[0;31m'
 CYAN='\033[0;36m'

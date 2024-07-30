@@ -1,6 +1,13 @@
-#!/usr/bin/env bash
-
-# Clones a repo then concatenates all the code into a single file (with separators).
+#!/bin/bash
+##
+## FILE: clone_single_file.sh
+##
+## DESCRIPTION: Clones a repo and concatenates all files with a specified extension with separators.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: clone_single_file.sh
+##
 
 # Get the current directory
 current_dir=$(dirname "$0")

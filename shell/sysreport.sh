@@ -1,7 +1,15 @@
-System Report
+#!/bin/bash
+##
+## FILE: sysreport.sh
+##
+## DESCRIPTION: Displays system info and writes to a file.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: sysreport.sh
+##
 
-#!/usr/bin/env bash
-# this script will collect system info and display and save it to a file.
+# TODO(chrisbuckleycode): Consider rewriting this very old script!
 
 filename="System_Report_$(date +"%FT%H%M%S%z").log"
 

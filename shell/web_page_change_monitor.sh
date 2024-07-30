@@ -1,12 +1,17 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#!/bin/bash
+##
+## FILE: web_page_change_monitor.sh
+##
+## DESCRIPTION: Monitors a url and notifies when underlying page changes.
+##
+## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
+##
+## USAGE: web_page_change_monitor.sh
+##
 
-#!/usr/bin/env bash
-
-# web_page_change_monitor.sh
-
-# script to monitor url for changes
-
-# This script downloads a page approx every minute and runs a comparison with the last download. As soon as a difference is noticed, it will alert with a desktop notification. It also writes a log so if you miss the notification you can see when it fired.
+# This script downloads a page approx every minute and runs a comparison with the last download.
+# As soon as a difference is noticed, it will alert with a desktop notification.
+# It also writes a log so if you miss the notification you can see when it fired.
 
 URL="https://www.rivm.nl/sites/default/files/2020-03/20200308%20kaart%20actueel%20corona08032020_mettitel.png"
 
@@ -47,7 +52,3 @@ while [[ $stop != "1" ]]; do
         stop=1
     fi  
 done
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
