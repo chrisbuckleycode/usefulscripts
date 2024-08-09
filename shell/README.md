@@ -48,6 +48,9 @@ Updates Python scripts with PEP-394 comcompliant shebang line.
 ## quotation_get_stoicism.sh
 Generates random stoicism quotation response from a free API.
 
+## random_digits.sh
+Randomly generates 3-digit numbers (10 instances each run).
+
 ## rename-master-main.sh
 Converts repo's mainline branch from "master" to "main".
 
