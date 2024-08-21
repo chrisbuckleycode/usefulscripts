@@ -24,6 +24,9 @@ Downloads (webcam) images periodically.
 ## local-port-pid.sh
 Displays Local Port; PID/Program name (via netstat).
 
+## loudness_convert.sh
+Converts loudness of mkv, mp3 files to -14 dB LUFS.
+
 ## lyrics_api_get.sh
 Displays random lyric from API request.
 
