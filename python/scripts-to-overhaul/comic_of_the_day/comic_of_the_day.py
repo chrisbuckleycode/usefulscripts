@@ -45,7 +45,6 @@ f = open(filename, "w")
 
 print("<html><head></head><html>", file=f)
 print("<p>Today's Cartoon</p>", file=f)
-# print("<img src=\"" + todaysimageurl + "\">", file=f)
 print("<img src=\"" + imagefilename + "\">", file=f)
 print("</body></html>", file=f)
 f.close()
@@ -53,9 +52,6 @@ f.close()
 #open and read the file after the appending:
 f = open(filename, "r")
 print(f.read())
-
-
-
 
 webbrowser.open(
     filename

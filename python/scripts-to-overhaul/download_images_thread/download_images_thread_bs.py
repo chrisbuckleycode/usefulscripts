@@ -12,7 +12,6 @@
 
 from bs4 import BeautifulSoup
 import urllib3
-# import re, requests
 import wget
 
 url = 'https://whatever.com/whatever-page'
@@ -23,37 +22,12 @@ http = urllib3.PoolManager(10, headers=user_agent)
 
 r = http.urlopen('GET', url)
 
-# print(r.data)
-
-
-# r = http.request('GET', url)
-# r.headers
-
 soup = BeautifulSoup(r.data)
 
-# print(soup)
-
 images = []
-# for img in soup.findAll('img'):
-#    images.append(img.get('src'))
-# for img in soup.findAll("a", {"class":"fileThumb"}):
-#     print (img['src'])
-# images = soup.findAll('href')
-
-# this will return src attrib from img tag that is inside 'a' tag
-
 
 for link in soup.findAll('a', {'class': 'thread_image_link'}):
     try:
-#        print ('https:'+link['href'])
         wget.download(link['href'])
     except KeyError:
         pass
-    
-
-
-# wget.download('')
-    
-    # link.attrs['href']
-
-# type(link)
