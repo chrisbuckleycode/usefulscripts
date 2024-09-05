@@ -7,14 +7,12 @@
 ## USAGE: python3 crop_image_top.py
 ##
 
-# TODO(chrisbuckleycode): Clean up comment block below from this very old script!
+# TODO(chrisbuckleycode): Move comments to README.md
 
-# sudo -H pip3 install Pillow
 # after cropping, convert to animated gif with imagemagick:
 # convert -delay 6 -loop 0 *.jpg animated.gif
 # optional to resize for sending via mobile:
 # convert animated.gif -resize 533x287 animated2.gif
-
 
 
 from PIL import Image

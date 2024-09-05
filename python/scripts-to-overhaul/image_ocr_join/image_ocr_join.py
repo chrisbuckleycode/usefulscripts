@@ -13,10 +13,6 @@ import glob
 import datetime
 
 # sudo apt install tesseract-ocr
-# Remember venv FIRST then:
-# python3 -m pip install pytesseract
-# python3 -m pip install --upgrade pip
-# python3 -m pip install --upgrade Pillow
 
 # Path to the Tesseract executable
 pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'

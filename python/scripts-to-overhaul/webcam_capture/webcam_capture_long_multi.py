@@ -7,9 +7,6 @@
 ## USAGE: python3 webcam_capture_long_multi.py
 ##
 
-# sudo -H pip3 install opencv-python
-# sudo -H pip3 install numpy
-
 # This script opens a stream and saves frames every 30s some other long duration. The stream is opened and closed for each frame capture to prevent overread but does mean a new request occurs for every single frame. See other script for shorter duration captures.
 
 import cv2
@@ -51,4 +48,3 @@ sites = ("http://site1/mjpg/video.mjpg", "http://site2/mjpg/video.mjpg", "http:/
 # add here as many urls as you want
 
 my_function(*sites)
-

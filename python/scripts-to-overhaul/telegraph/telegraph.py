@@ -31,7 +31,6 @@ markdown_file.close()
 # content = ""
 
 
-
 with open('markdown.txt', 'r') as file_headers:
 
     title = str(file_headers.readlines(1))
@@ -58,18 +57,13 @@ image_url_chopped = image_url_cleaned.split(' ', 1)[1]
 
 # input("Press Enter to continue...")
 
-
-
 with open('markdown.txt', 'r') as file_contents:
 #default:    rendered = mistletoe.markdown(file_contents)
     contents_rendered = mistletoe.markdown(file_contents.readlines()[6:])
 file_contents.close()
 # print (contents_rendered)    
-
-
     
 # input("Press Enter to continue...")
-
 
 filename = "index.htm"
 f = open(filename, "w")
@@ -105,9 +99,6 @@ print("<a target=\"_blank\" href=\"" + info_url + "\">Get Account Info</a>", fil
 info_url = "https://api.telegra.ph/getPageList?access_token=" + access_token + "&limit=200"
 
 print("<a target=\"_blank\" href=\"" + info_url + "\">Get Page List</a>", file=f)
-
-
-
 print("<br />", file=f)    
 print("<br />", file=f)  
 
@@ -122,7 +113,6 @@ print("<h2>Post Body</h2>", file=f)
 if image_url:
     print("<p><img src=\"" + image_url_chopped + "\"></p>", file=f)
 
-
 print (contents_rendered, file=f)
 
 print("<p>End of Preview</p>", file=f)
@@ -130,7 +120,6 @@ print("<p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>", file=f)
 
 new_title = title_chopped.replace(" ", "+")
 # input("Press Enter to continue...")
-
 
 #https://api.telegra.ph/createPage?access_token=XXX&author_name=XXX&author_url=XXX&title=XXX&content=[{"tag":"p","children":["test!"]},{"tag":"p","children":["a,+b!"]},{"tag":"img","attrs":{"src":"https://i.redd.it/1phq9yjz2jx41.jpg"}}]&return_content=true
 
@@ -159,7 +148,6 @@ result_stringed = result_stringed.replace(" ", "+")
 
 # print(result_stringed, file=f)
 
-
 create_url = "https://api.telegra.ph/createPage?access_token=" + access_token + "&author_name=" + author_name_chopped + "&author_url=" + author_url_chopped + "&title=" + new_title + "&content=" + result_stringed + "&return_content=true"
 
 # {"tag":"img","attrs":{"src":"https:bla.com/image.jpg"}}
@@ -169,11 +157,7 @@ if image_url:
     element_to_insert = image_lhs + image_url_chopped + image_rhs
     create_url = "https://api.telegra.ph/createPage?access_token=" + access_token + "&author_name=" + author_name_chopped + "&author_url=" + author_url_chopped + "&title=" + new_title + "&content=" + result_stringed[:1] + element_to_insert + result_stringed[1:] + "&return_content=true"
     
-
 print("<a target=\"_blank\" href=\"" + create_url + "\">Create Post</a>", file=f)
-
-
-
 
 print("</body></html>", file=f)
 f.close()

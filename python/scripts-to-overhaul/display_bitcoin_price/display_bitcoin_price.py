@@ -42,8 +42,6 @@ btc_value = newsoup.get_text()
 
 print (btc_value)
 
-
-
 filename = "index.htm"
 f = open(filename, "w")
 
@@ -56,9 +54,6 @@ f.close()
 #open and read the file after the appending:
 f = open(filename, "r")
 print(f.read())
-
-
-
 
 webbrowser.open(
     filename

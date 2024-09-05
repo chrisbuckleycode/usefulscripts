@@ -24,29 +24,12 @@ def text_extractor(path):
     with open(path, 'rb') as f:
         pdf = pdftotext.PDF(f)
         numpages = len(pdf)
-        # print("number of pages is " + str(numpages))
-        
-        
-        
-        
-        # get the first page
-        # page = pdf.getPage(1)
-        # print(page)
-        # print('Page type: {}'.format(str(type(page))))
-
-        # text = page.extractText()
-        # print(text)
         
         totalpagetext = ""
-        # print (totalpagetext)
         
         for i in range(48, 311):
             singlepagetext = pdf[i]
-            # print(singlepagetext)
             totalpagetext = totalpagetext + singlepagetext
-            
-            
-        # print(totalpagetext)
         
         newbuffer = io.StringIO(totalpagetext)
         
@@ -54,17 +37,13 @@ def text_extractor(path):
         
         line_lst = [line.lstrip() for line in newbuffer.readlines()]
         totalpagetext = ''.join(line_lst)
-        
-        # print(totalpagetext)
-        
+               
         # write to .txt file
         textfile = open(path[:-4] + '.txt', 'w')
               
         textfile.write(totalpagetext)
         
         textfile.close()
-        
-        
         
         # read the lines out of the text file
         with open(path[:-4] + '.txt', "r") as g:
@@ -81,14 +60,12 @@ def text_extractor(path):
                     h.write(line)
         h.close()
 
-
         # create spaced file, carriage return after every second/third line
 
         # reading in lines again
         with open(path[:-4] + '.txt', "r") as k_read:
             lines = k_read.readlines()
-        k_read.close()
-        
+        k_read.close()       
         
         with open(path[:-4] + '_spaced' + '.txt', "w") as k:
             linecounter = 0
@@ -100,8 +77,6 @@ def text_extractor(path):
                 k.write(line)        
         k.close()        
      
-        
-        
         # create csv
         with open(path[:-4] + '.txt', "r") as i:
             lines = i.readlines()
@@ -116,18 +91,6 @@ def text_extractor(path):
                     line = line.strip() + '&'
                 j.write(line)        
         j.close()        
-        
-   
-        
-        
-        
-        
-
-
-        
+               
 path = 'g.pdf'
 text_extractor(path)
-
-
-
-
