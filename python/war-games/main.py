@@ -1,6 +1,9 @@
 import random
 import calendar
 import os
+import sys
+from time import sleep
+
 
 class Country:
     def __init__(self, name, budget, manpower, land_forces, air_forces, navy):
@@ -63,7 +66,7 @@ def draw_chance_card(deck):
 def apply_chance_card(card, country, is_player=True):
     messages = []
     if card.user_choice_required and is_player:
-        print(f"\nChance Event: {card.message}")
+        print(f"\nPlayer Chance Event: {card.message}")
         choice = input("Choose (1) for the first option or (2) for the second option: ")
         if choice not in ['1', '2']:
             choice = random.choice(['1', '2'])
@@ -98,25 +101,7 @@ def apply_chance_card(card, country, is_player=True):
     return messages
 
 def main():
-    player_choice = input("Choose your country (USA or China, or enter the first character of the country): ").upper()
-    if player_choice == "U" or player_choice == "USA":
-        player_country = Country("USA", 800, 1358, 5.652, 13.175, 0.460)
-        other_country = Country("China", 700, 2035, 5.750, 4.630, 0.742)
-        player_deck = create_chance_deck()
-        opponent_deck = create_chance_deck()
-    elif player_choice == "C" or player_choice == "CHINA":
-        player_country = Country("China", 700, 2035, 5.750, 4.630, 0.742)
-        other_country = Country("USA", 800, 1358, 5.652, 13.175, 0.460)
-        player_deck = create_chance_deck()
-        opponent_deck = create_chance_deck()
-    else:
-        print("Invalid country choice. Exiting the game.")
-        return
-
-    month = 1
-    year = 2025
-
-    player_multipliers = {
+    usa_multipliers = {
         "budget": 1.0004,
         "manpower": 1.0004,
         "land_forces": 1.0004,
@@ -124,13 +109,69 @@ def main():
         "navy": 1.0002
     }
 
-    other_multipliers = {
+    china_multipliers = {
         "budget": 1.0015,
         "manpower": 1.0005,
         "land_forces": 1.0005,
         "air_forces": 1.0050,
         "navy": 1.0002
     }
+
+    clear_screen()
+
+    title = "Welcome to 'Adversary'!"
+    for char in title:
+        sleep(0.15  )
+        sys.stdout.write(char)
+        sys.stdout.flush()
+
+    print("\n")
+    sleep(1)
+    print("- You choose either USA or China and the computer will play as the other country.")
+    sleep(1)
+    print("- Both countries are in a race against time to build their militaries.")
+    sleep(1)
+    print("- Random events and your decisions will determine the fate of your country.")
+    sleep(1)
+    print("\n")
+    sleep(1)
+    print("Hint: You can hold down the Enter key to speed up and make random choices\n")
+    sleep(1)
+    input("Press Enter to continue...")
+    print("\n")
+    quote = "THE ONLY WINNING MOVE IS TO PLAY"
+    for char in quote:
+        sleep(0.1)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+    sleep(2)
+    print("\n\n\n")
+
+    player_choice = input("Choose your country (USA or China, or enter the first character of the country). Press Enter for a random choice: ").upper()
+    
+    if player_choice == "":
+        player_choice = random.choice(["USA", "CHINA"])
+        print(f"Random country selected: {player_choice}")
+
+    if player_choice == "U" or player_choice == "USA":
+        player_country = Country("USA", 800, 1358, 5.652, 13.175, 0.460)
+        other_country = Country("China", 700, 2035, 5.750, 4.630, 0.742)
+        player_multipliers = usa_multipliers
+        other_multipliers = china_multipliers
+    elif player_choice == "C" or player_choice == "CHINA":
+        player_country = Country("China", 700, 2035, 5.750, 4.630, 0.742)
+        other_country = Country("USA", 800, 1358, 5.652, 13.175, 0.460)
+        player_multipliers = china_multipliers
+        other_multipliers = usa_multipliers
+    else:
+        print("Invalid country choice. Exiting the game.")
+        return
+
+    player_deck = create_chance_deck()
+    opponent_deck = create_chance_deck()
+
+    month = 1
+    year = 2025
 
     while True:
         display_statistics(player_country, other_country, month, year)
