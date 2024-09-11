@@ -6,11 +6,13 @@ This directory contains (1) finalized scripts in their own directory and (2) ind
 
 See above or click links:
 
-- [Graffiti Wall](/python/graffiti-wall/)
-- [Key Code Generator](/python/key_code_generator/)
-- [Mapper](/python/mapper/)
-- [Subreddit Stats](/python/subreddit-stats/)
-- [Sun Detector](/python/sun-detector/)
+- [Graffiti Wall](graffiti-wall/)
+- [Key Code Generator](key_code_generator/)
+- [Mapper](mapper/)
+- [Subreddit Stats](subreddit-stats/)
+- [Sun Detector](sun-detector/)
+- [War Games](war-games/)
+- [Archive](z_archive/)
 
 ## Scripts To Overhaul
 
