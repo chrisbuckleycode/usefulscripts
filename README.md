@@ -2,11 +2,10 @@
 
 Various infrastructure and application related scripts/IaC including:
 
-- [Bash](/shell/)
-- [Python](/python/)
-- [Golang](/golang/)
+- [Bash](/1.shell/)
+- [Python](/2.python/)
 
-## Links
+## More
 
 - See my other main repo: [Cloud DevOps Scripts](https://github.com/chrisbuckleycode/cloud-devops-scripts)
 

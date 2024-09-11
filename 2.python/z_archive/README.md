@@ -1,9 +1,10 @@
-# Python Scripts To Overhaul
+# Archive
 
-Warning! These scripts require overhaul as they are from my early days!
+Warning! These scripts require housekeeping. They are from my early days when I used Jupyter Notebook instead of a real IDE! They are archived because they still have useful reference value.
 
-- To Do: Completely overhaul scripts
-- To Do: Move scripts into individual directories and add requirements.txt, README.md
+- To Do: Decide if worth overhauling
+- To Do: Test scripts, update library versions
+- To Do: Refactor for usability
 
 ## bmarks-sort-alpha-title-only.py
 Sorts bookmarks alphabetically. Displays Title only.
