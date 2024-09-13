@@ -6,6 +6,7 @@ This directory contains (1) finalized scripts in their own directory and (2) ind
 
 See above or click links:
 
+- [Cee-lo](cee-lo/)
 - [Graffiti Wall](graffiti-wall/)
 - [Key Code Generator](key_code_generator/)
 - [Mapper](mapper/)
