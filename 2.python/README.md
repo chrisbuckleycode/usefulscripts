@@ -1,16 +1,25 @@
 # Python Scripts
 
-This directory contains (1) finalized scripts in their own directory and (2) individual scripts done as a beginner and requiring major overhaul.
+## cee-lo
+2-Player version of the Cee-lo game. [Link](cee-lo/)
 
-## Finalized Scripts
+## graffiti-wall
+Leave a message on a continually updating "graffiti wall". [Link](graffiti-wall/)
 
-See above or click links:
+## key_code_generator
+Generates 6-digit keypad sequences with maximized finger travel. [Link](key_code_generator/)
 
-- [Cee-lo](cee-lo/)
-- [Graffiti Wall](graffiti-wall/)
-- [Key Code Generator](key_code_generator/)
-- [Mapper](mapper/)
-- [Subreddit Stats](subreddit-stats/)
-- [Sun Detector](sun-detector/)
-- [War Games](war-games/)
-- [Archive](z_archive/)
+## mapper
+Opens the GeoHack page for a specified city. [Link](mapper/)
+
+## subreddit-stats
+Multiple scripts to convert and load a subreddit text file into a sqlite3 database. [Link](subreddit-stats/)
+
+## sun-detector
+Detects sunrise/sunset in a webcam image. [Link](sun-detector/)
+
+## war-games
+War game simulator between two large adversaries. [Link](war-games/)
+
+## Archive
+Archive of early/old scripts. Requires sorting, housekeeping, updating, testing, refactoring. [Link](z_archive/)
