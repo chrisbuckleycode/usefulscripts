@@ -13,7 +13,3 @@ See above or click links:
 - [Sun Detector](sun-detector/)
 - [War Games](war-games/)
 - [Archive](z_archive/)
-
-## Scripts To Overhaul
-
-- [Scripts To Overhaul](/python/scripts-to-overhaul/)
