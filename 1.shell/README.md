@@ -9,6 +9,9 @@ Enables command-line brightness control for Intel graphics display on Linux.
 ## clone_single_file.sh
 Clones a repo and concatenates all files with a specified extension with separators.
 
+## color-codes.sh
+Prints table colors (in color) against hex codes. Useful for frontend and graphic design work.
+
 ## connectivity_test.sh
 Tests internet connectivity and displays statistics.
 
