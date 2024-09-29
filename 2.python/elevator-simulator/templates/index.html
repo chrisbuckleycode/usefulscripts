@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevator Simulator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid #000;
+        }
+        #floorSelector {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="simulatorCanvas"></canvas>
+    <select id="floorSelector"></select>
+    <script>
+        const canvas = document.getElementById('simulatorCanvas');
+        const ctx = canvas.getContext('2d');
+        const floorSelector = document.getElementById('floorSelector');
+        
+        // Set canvas size
+        canvas.width = 800;
+        canvas.height = 600;
+
+        let currentLobbyFloor = 1;
+        const totalFloors = 20;
+
+        // Populate floor selector
+        for (let i = 1; i <= totalFloors; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = `Floor ${i}`;
+            floorSelector.appendChild(option);
+        }
+
+        function drawButton(x, y, width, height, label, isActive) {
+            ctx.fillStyle = isActive ? 'yellow' : 'white';
+            ctx.fillRect(x, y, width, height);
+            ctx.strokeRect(x, y, width, height);
+            ctx.fillStyle = 'black';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(label, x + width / 2, y + height / 2);
+        }
+
+        function drawElevatorLobby(state) {
+            ctx.fillStyle = 'lightgray';
+            ctx.fillRect(0, 0, 250, canvas.height);
+            
+            // Draw call buttons
+            if (currentLobbyFloor < totalFloors) {
+                drawButton(50, 250, 50, 50, '▲', state.calls[currentLobbyFloor] && state.calls[currentLobbyFloor].up);
+            }
+            if (currentLobbyFloor > 1) {
+                drawButton(50, 310, 50, 50, '▼', state.calls[currentLobbyFloor] && state.calls[currentLobbyFloor].down);
+            }
+
+            // Draw elevator position indicators
+            ctx.fillStyle = 'black';
+            ctx.font = '20px Arial';
+            ctx.fillText('Elevator 1', 50, 50);
+            ctx.fillText('Elevator 2', 150, 50);
+            
+            drawButton(50, 80, 50, 50, state.elevators[0].current_floor, false);
+            drawButton(150, 80, 50, 50, state.elevators[1].current_floor, false);
+
+            // Draw elevator direction
+            ctx.font = '16px Arial';
+            ctx.fillText(state.elevators[0].direction, 50, 150);
+            ctx.fillText(state.elevators[1].direction, 150, 150);
+
+            // Draw current floor indicator
+            ctx.fillText(`Current Floor: ${currentLobbyFloor}`, 125, 500);
+        }
+
+        function drawElevatorInterior(elevator, x) {
+            ctx.fillStyle = 'lightblue';
+            ctx.fillRect(x, 0, 250, canvas.height);
+
+            // Draw elevator position indicator
+            ctx.fillStyle = 'black';
+            ctx.font = '20px Arial';
+            ctx.fillText(`Elevator ${elevator.id}`, x + 125, 50);
+            drawButton(x + 100, 80, 50, 50, elevator.current_floor, false);
+
+            // Draw floor buttons
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 4; j++) {
+                    const floor = i * 4 + j + 1;
+                    if (floor <= totalFloors) {
+                        drawButton(x + 50 + j * 50, 200 + i * 60, 40, 40, floor, elevator.requests.includes(floor));
+                    }
+                }
+            }
+        }
+
+        function updateSimulation(state) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawElevatorLobby(state);
+            drawElevatorInterior(state.elevators[0], 275);
+            drawElevatorInterior(state.elevators[1], 550);
+        }
+
+        function callElevator(floor, direction) {
+            fetch('/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({action: 'call', floor: floor, elevator: null, direction: direction}),
+            })
+            .then(response => response.json())
+            .then(state => updateSimulation(state));
+        }
+
+        function selectFloor(elevator, floor) {
+            fetch('/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({action: 'select', floor: floor, elevator: elevator}),
+            })
+            .then(response => response.json())
+            .then(state => updateSimulation(state));
+        }
+
+        // Add event listeners for user interactions
+        canvas.addEventListener('click', function(event) {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // Check for lobby call buttons
+            if (x >= 50 && x <= 100) {
+                if (y >= 250 && y <= 300 && currentLobbyFloor < totalFloors) {
+                    callElevator(currentLobbyFloor, 'up');
+                } else if (y >= 310 && y <= 360 && currentLobbyFloor > 1) {
+                    callElevator(currentLobbyFloor, 'down');
+                }
+            }
+
+            // Check for elevator interior buttons
+            for (let e = 0; e < 2; e++) {
+                const elevatorX = 275 + e * 275;
+                if (x >= elevatorX && x <= elevatorX + 250) {
+                    for (let i = 0; i < 5; i++) {
+                        for (let j = 0; j < 4; j++) {
+                            if (x >= elevatorX + 50 + j * 50 && x <= elevatorX + 90 + j * 50 &&
+                                y >= 200 + i * 60 && y <= 240 + i * 60) {
+                                const floor = i * 4 + j + 1;
+                                if (floor <= totalFloors) {
+                                    selectFloor(e + 1, floor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        floorSelector.addEventListener('change', function(event) {
+            currentLobbyFloor = parseInt(event.target.value);
+            updateSimulation(lastState);
+        });
+
+        let lastState;
+
+        // Initial state and periodic updates
+        function fetchUpdate() {
+            fetch('/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({action: null, floor: null, elevator: null}),
+            })
+            .then(response => response.json())
+            .then(state => {
+                lastState = state;
+                updateSimulation(state);
+            });
+        }
+
+        fetchUpdate();
+        setInterval(fetchUpdate, 1000);
+    </script>
+</body>
+</html>
