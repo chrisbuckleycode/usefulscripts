@@ -3,6 +3,9 @@
 ## cee-lo
 2-Player version of the Cee-lo game. [Link](cee-lo/)
 
+## elevator-simulator
+Simulation of two elevators using Python and HTML canvas. [Link](elevator-simulator/)
+
 ## graffiti-wall
 Leave a message on a continually updating "graffiti wall". [Link](graffiti-wall/)
 
