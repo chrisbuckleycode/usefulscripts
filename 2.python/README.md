@@ -15,6 +15,9 @@ Generates 6-digit keypad sequences with maximized finger travel. [Link](key_code
 ## mapper
 Opens the GeoHack page for a specified city. [Link](mapper/)
 
+## solar-system-sim
+Solar system 2-D animation simulator, sun and planets (including moons), Tkinter-based. [Link](solar-system-sim/)
+
 ## subreddit-stats
 Multiple scripts to convert and load a subreddit text file into a sqlite3 database. [Link](subreddit-stats/)
 
