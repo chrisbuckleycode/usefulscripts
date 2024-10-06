@@ -3,6 +3,7 @@
 ## FILE: catalog.sh
 ##
 ## DESCRIPTION: Blueprint "book catalog" CRUD style application (no update functionality, all records are immutable).
+##              Requires sqlite3 (sudo apt install sqlite3)
 ##
 ## AUTHOR: Chris Buckley (github.com/chrisbuckleycode)
 ##
