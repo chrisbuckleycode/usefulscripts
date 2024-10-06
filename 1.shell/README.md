@@ -7,7 +7,7 @@ Displays  all files in directory, sorted by decreasing size.
 Enables command-line brightness control for Intel graphics display on Linux.
 
 ## catalog.sh
-Blueprint "book catalog" CRUD style application (no update functionality, all records are immutable).
+Blueprint "book catalog" CRUD style application (no update functionality, all records are immutable). Uses sqlite3.
 
 ## clone_single_file.sh
 Clones a repo and concatenates all files with a specified extension with separators.
