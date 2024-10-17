@@ -6,7 +6,7 @@
 
 ```shell
 $ git clone https://github.com/chrisbuckleycode/usefulscripts.git
-$ cd usefulscripts/cee-lo
+$ cd usefulscripts/2.python/cee-lo
 $ python3 -m venv .env
 $ source .env/bin/activate
 $ pip install -r requirements.txt
