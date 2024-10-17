@@ -2,7 +2,7 @@
 
 Diagnostic home broadband test. Plots latency of continuous pings to assist with outage investigation. Also, logs created for ping, dns and traceroute.
 
-![Elevator Simulator Screenshot](images/latency_plot.png)
+![Broadband Test Matplotlib Graph](images/latency_plot.png)
 
 # Usage Reminder
 
