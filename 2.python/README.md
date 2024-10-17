@@ -1,5 +1,8 @@
 # Python Scripts
 
+## broadband-test
+Diagnostic home broadband test. Plots latency of continuous pings to assist with outage investigation. Also, logs created for ping, dns and traceroute. [Link](broadband-test/)
+
 ## cee-lo
 2-Player version of the Cee-lo game. [Link](cee-lo/)
 

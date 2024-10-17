@@ -8,7 +8,7 @@ Simulation of two elevators using Python and HTML canvas.
 
 ```shell
 $ git clone https://github.com/chrisbuckleycode/usefulscripts.git
-$ cd usefulscripts/elevator-simulator
+$ cd usefulscripts/2.python/elevator-simulator
 $ python3 -m venv .env
 $ source .env/bin/activate
 $ pip install -r requirements.txt
@@ -24,4 +24,4 @@ $ deactivate
 # Future Ideas
 - Overhaul elevator logic to be more simple and robust (currently very good except for some rare, unusual edge cases).
 - Change timing to account for door operations.
-- Overhaul GUI
+- Overhaul GUI.

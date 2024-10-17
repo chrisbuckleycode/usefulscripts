@@ -8,7 +8,7 @@
 
 ```shell
 $ git clone https://github.com/chrisbuckleycode/usefulscripts.git
-$ cd usefulscripts/graffiti-wall
+$ cd usefulscripts/2.python/graffiti-wall
 $ python3 -m venv .env
 $ source .env/bin/activate
 $ pip install -r requirements.txt
