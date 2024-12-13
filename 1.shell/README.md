@@ -18,6 +18,9 @@ Prints table colors (in color) against hex codes. Useful for frontend and graphi
 ## connectivity_test.sh
 Tests internet connectivity and displays statistics.
 
+## directory-cleanup.sh
+Traverses sub-directories and deletes cache folders.
+
 ## gist_cloner.sh
 Clones all gists in a Github account without using API tokens (requires gh cli).
 
@@ -29,6 +32,9 @@ Downloads (webcam) images periodically.
 
 ## local-port-pid.sh
 Displays Local Port; PID/Program name (via netstat).
+
+## logon-disk-check.sh
+Logon script to check file system usage/inodes and warn if >90%.
 
 ## loudness_convert.sh
 Converts loudness of mkv, mp3 files to -14 dB LUFS.
