@@ -66,6 +66,9 @@ Generates random stoicism quotation response from a free API.
 ## random_digits.sh
 Randomly generates 3-digit numbers (10 instances each run).
 
+## recent.sh
+Displays 9 most recently modified txt files found recursively from $HOME.
+
 ## rename-master-main.sh
 Converts repo's mainline branch from "master" to "main".
 
