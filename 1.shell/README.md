@@ -67,7 +67,7 @@ Generates random stoicism quotation response from a free API.
 Randomly generates 3-digit numbers (10 instances each run).
 
 ## recent.sh
-Displays 9 most recently modified txt files found recursively from $HOME.
+Displays 20 most recently modified txt files found recursively from $HOME.
 
 ## rename-master-main.sh
 Converts repo's mainline branch from "master" to "main".
@@ -92,6 +92,9 @@ Displays system info using common Linux commands.
 
 ## temps.sh
 Records sensor temperature to a file for direct import into spreadsheet software.
+
+## top100.sh
+Displays 100 most frequently used commands from Zsh's history.
 
 ## web_page_change_monitor.sh
 Monitors a url and notifies when underlying page changes.
