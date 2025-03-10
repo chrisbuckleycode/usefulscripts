@@ -1,0 +1,5 @@
+memo,coin_id,quantity
+Main Wallet BTC,bitcoin,0.0005
+Main Wallet ETH,bitcoin,0.0025
+Cold Storage BTC,ethereum,0.05
+Cash Holdings,tether,500

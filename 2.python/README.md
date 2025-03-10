@@ -18,6 +18,9 @@ Generates 6-digit keypad sequences with maximized finger travel. [Link](key_code
 ## mapper
 Opens the GeoHack page for a specified city. [Link](mapper/)
 
+## portfolio
+Crypto portfolio tracker. Portfolio value updated on open and written to local log. [Link](portfolio/)
+
 ## solar-system-sim
 Solar system 2-D animation simulator, sun and planets (including moons), Tkinter-based. [Link](solar-system-sim/)
 
@@ -26,6 +29,9 @@ Multiple scripts to convert and load a subreddit text file into a sqlite3 databa
 
 ## sun-detector
 Detects sunrise/sunset in a webcam image. [Link](sun-detector/)
+
+## ticker
+Crypto ticker (Bitcoin). [Link](ticker/)
 
 ## war-games
 War game simulator between two large adversaries. [Link](war-games/)
